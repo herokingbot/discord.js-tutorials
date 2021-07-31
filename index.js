@@ -1,9 +1,28 @@
-const { Collection, Client, Discord, MessageEmbed, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_INVITES] });
-const config = require('./config.json')
+const { Collection, Client } = require('discord.js');
+const client = new Client({
+    intents: [
+        "GUILDS",
+        "GUILD_MEMBERS",
+        "GUILD_BANS",
+        "GUILD_INTEGRATIONS",
+        "GUILD_WEBHOOKS",
+        "GUILD_INVITES",
+        "GUILD_VOICE_STATES",
+        "GUILD_PRESENCES",
+        "GUILD_MESSAGES",
+        "GUILD_MESSAGE_REACTIONS",
+        "GUILD_MESSAGE_TYPING",
+        "DIRECT_MESSAGES",
+        "DIRECT_MESSAGE_REACTIONS",
+        "DIRECT_MESSAGE_TYPING",
+    ],
+});
+module.exports = client;
 
-client.on('ready', () => {
-    console.log(`${client.user.tag} is now online!`)
-})
+client.commands = new Collection()
+client.config = require('./config.json')
+client.prefix = client.config.prefix
 
-client.login(config.token)
+require('./handler')(client);
+
+client.login(client.config.token)
