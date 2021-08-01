@@ -1,7 +1,8 @@
 // Based on reconlx handler
 
 const { glob } = require('glob') // Do npm install glob
-const { promisify } = require('util') // This is pre-installed
+const { promisify } = require('util'); // This is pre-installed
+const { aliases } = require('..');
 
 const globPromise = promisify(glob);
 
@@ -17,6 +18,7 @@ module.exports = async (client) => {
             const properties = { directory, ...file }
             client.commands.set(file.name, properties)
         }
+        if (file.aliases && Array.isArray(file.aliases)) { file.aliases.forEach(alias => client.aliases.set(alias, file.name)) }
     })
 
     //Event Handler

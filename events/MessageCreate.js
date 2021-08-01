@@ -8,9 +8,11 @@ client.on("messageCreate", async (message) => {
         .trim()
         .split(" ");
 
-    const command = client.commands.get(cmd)
+    let command = client.commands.get(cmd)
+    //make the const command to let command
 
-    if (!command) return;
-
-    await command.run(client, message, args) // Now lets make a command
-})
+    if (!command) command = client.commands.get(client.aliases.get(cmd))
+    if (command) {
+        await command.run(client, message, args) // Now lets make a command
+    } // This should be it lets test it out :D
+}) // ahh.. wait before this we need to add aliases to the command
