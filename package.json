@@ -1,0 +1,25 @@
+{
+  "name": "tutorials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^13.0.0-dev.2675b08.1627603447",
+    "glob": "^7.1.7",
+    "mongoose": "^5.13.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fire-Development/discord.js-tutorials.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fire-Development/discord.js-tutorials/issues"
+  },
+  "homepage": "https://github.com/Fire-Development/discord.js-tutorials#readme"
+}
