@@ -24,7 +24,8 @@ Official Repository of Discord.JS v13 Tutorials by FiredragonPlayz on YouTube!
 
 <br>
 </br>
-<a href=""><img src="https://invidget.switchblade.xyz/FCP2HWksBU"/></a>
+<a href="https://discord.gg/FCP2HWksBU">
+<img src="https://invidget.switchblade.xyz/FCP2HWksBU"></a>
 <br></br>
 <div align="center">
 <a href="https://discord.gg/FCP2HWksBU">
