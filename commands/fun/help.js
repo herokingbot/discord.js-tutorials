@@ -208,7 +208,7 @@ module.exports = {
                     let emoe = emo ? `${emo} - ` : ``;
 
                     let obj = {
-                        cname: `${prefix}${emoe}\`${name}\``,
+                        cname: `${emoe}\`${name}\``,
                         des
                     }
 
@@ -221,7 +221,7 @@ module.exports = {
                     if (co == undefined) return;
 
                     dota = {
-                        name: prefix + `${cmds.length === 0 ? "In progress." : prefix + co.cname}`,
+                        name: `${cmds.length === 0 ? "In progress." : prefix + co.cname}`,
                         value: co.des ? co.des : `No Description`,
                         inline: true,
                     }
