@@ -19,7 +19,7 @@ Official Repository of Discord.JS v13 Tutorials by FiredragonPlayz on YouTube!
 
 ![](https://media.discordapp.net/attachments/821972674380038166/872513016187465788/unknown.png)
 
-- Then Click on the branche that you need the code of!
+- Then Click on the branch that you need the code of!
 ## Join For Support
 
 <br>
